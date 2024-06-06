@@ -13,8 +13,6 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-RUN npx prisma generate
-
 # Expose port 5000 to the outside world
 EXPOSE 5000
 
