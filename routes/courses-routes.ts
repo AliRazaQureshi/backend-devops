@@ -1,5 +1,5 @@
 import express from 'express'
-// import { prisma } from '../prisma/db';
+import { prisma } from '../prisma/db';
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -11,13 +11,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const body = req.body;
     console.log({ body })
-    // const course = await prisma.course.create({
-    //     data: {
-    //         title: body.title,
-    //         description: body.description
-    //     }
-    // })
-    return res.json({ course: "" }).status(201)
+    const course = await prisma.course.create({
+        data: {
+            title: body.title,
+            description: body.description
+        }
+    })
+    return res.json({ course }).status(201)
 })
 
 export default router;
