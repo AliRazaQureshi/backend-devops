@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /opt/devops/backend
+
+hooks:
+  ApplicationStop:
+    - location: beforeinstall.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - location: beforeinstall.sh
+      timeout: 300
+      runas: root
+  Install:
+    - location: afterinstall.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: start.sh
+      timeout: 300
+      runas: root
