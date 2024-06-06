@@ -3,10 +3,10 @@ import { Client } from 'pg';
 
 // Configure your PostgreSQL connection here
 const client = new Client({
-    user: 'your_database_user',
-    host: 'your_database_host',
-    database: 'your_database_name',
-    password: 'your_database_password',
+    user: 'postgres',
+    host: 'database-1.c9uwe08uospl.us-east-1.rds.amazonaws.com',
+    database: 'postgres',
+    password: 'password1234',
     port: 5432, // default PostgreSQL port
 });
 
