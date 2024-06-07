@@ -1,10 +1,8 @@
 -- CreateTable
-CREATE TABLE "Course" (
+CREATE TABLE Course (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
-    "content" TEXT,
+    "description" TEXT,
     "published" BOOLEAN NOT NULL DEFAULT false,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT "Course_pkey" PRIMARY KEY ("id")
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
