@@ -15,6 +15,8 @@ COPY . .
 
 RUN npx prisma generate
 
+RUN npx prisma migrate dev --name init
+
 # Expose port 5000 to the outside world
 EXPOSE 5000
 
